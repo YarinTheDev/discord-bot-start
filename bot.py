@@ -17,19 +17,11 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    # Handle the !github command
+    # make an !github command
     if message.content.startswith('!github'):
-        await message.channel.send('Here is a link to my GitHub page: https://github.com/<username>')
+        await message.channel.send('Here is a link to my GitHub page: https://github.com/YarinTheDev')
 
-    # Handle the !repo command
-    if message.content.startswith('!repo'):
-        repo_name = message.content[6:]  # Get the name of the repository from the message
-        await message.channel.send('Here is a link to the {} repository: https://github.com/<username>/{}'.format(repo_name, repo_name))
-
-    # Handle the !issue command
-    if message.content.startswith('!issue'):
-        issue_number = message.content[7:]  # Get the issue number from the message
-        await message.channel.send('Here is a link to issue #{} on my GitHub page: https://github.com/<username>/issues/{}'.format(issue_number, issue_number))
+    
 
 # Run the bot with your bot token
-client.run('YOUR_BOT_TOKEN_H
+client.run('YOUR_BOT_TOKEN_HERE')
